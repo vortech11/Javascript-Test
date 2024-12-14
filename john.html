@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <style>
+        .calc {
+            float: right;
+            width: 50%;
+        }
+    </style>
+
+
+    <script src="calculator.js"></script>
+    
+
+    <div class="calc">
+        <h1>
+            Calculator
+        </h1>
+
+        <input id="inputText" type="text" onchange="submit()">
+
+        <p></p>
+
+        <button id="addButton" onclick="addClick()">
+            Add
+        </button>
+
+        <inline>
+            <button id="subButton" onclick="subClick()">
+                Subtract
+            </button>
+        </inline>
+        <inline>
+            <button id="multButton" onclick="multClick()">
+                Multiply
+            </button>
+        </inline>
+        <inline>
+            <button id="divButton" onclick="divClick()">
+                Divide
+            </button>
+        </inline>
+
+        <p id="expressionText">Expression</p>
+        <p id="answerText">Answer</p>
+
+    </div>
+    
+    <div style="float:left">
+        <p>yep</p>
+    </div>
+
+
+    <button onclick="document.location='index.html'">wha</button>
+
+</body>
+</html> 
