@@ -1,20 +1,51 @@
 <!DOCTYPE html>
 <html>
     <body>
-
+        <script src="form.js"></script>
         <style>
-            .gameScreen {
-                outline:grey solid 2px
+            p.outputText {
+                padding: 5px; 
+                outline:solid grey 1px; 
+                width: 230px; 
+                height: 200px
+                
+            }
+            input {
+                width: calc(100% - 50px);
+                float: right;
             }
         </style>
+        
+        <div>
+            <h1 style="width:225px">Swimming Data Collecter!</h1>
+            
+            <div style="width:150px">
+                <inline>ID:</inline>
+                <input id="idInput" type="number">
+                <p></p>
+                <inline>Stroke:</inline>
+                <select id="strokeInput">
+                    <option>Free</option>
+                    <option>Breast</option>
+                    <option>Back</option>
+                    <option>Fly</option>
+                </select>
+                <p></p>
+                <inline>Time:</inline>
+                <input id="timeInput" type="number">
+                <p></p>
+                <button onclick="submit()">Submit</button>
+            </div>
+            <p></p>
 
-        <h1>Yep</h1>
+            <button onclick="getData()">Get Data</button>
 
-        <canvas class="gameScreen" id="screen1"></canvas>
-
-        <script type="module" src="game.js"></script>
-
-        <p><a href="john.html">Click this to go back</a></p>
-
+            <p class="outputText" id="outputTextBox"></p>
+        </div>
+        <button type="reset" style="width:240px; margin-bottom: 10px;" onclick="resetData()">Reset</button>
     </body>
+
+    <footer>
+        <button onclick="document.location='/calc/john.html'">To other page</button>
+    </footer>
 </html>
